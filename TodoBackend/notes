@@ -1,0 +1,8 @@
+CREATE TABLE todo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    todo_text VARCHAR(255) NOT NULL,
+    editing_enabled TINYINT(1) DEFAULT 0,  -- 0 = Incomplete, 1 = Completed
+    is_completed TINYINT(1) DEFAULT 0,  -- 0 = Incomplete, 1 = Completed    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
